@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class OddNumbersExterminator {
 
-    // returns a new ArrayList<Integer> consisting of all even numbers
-
-    // from given one in original order
+  
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
 
