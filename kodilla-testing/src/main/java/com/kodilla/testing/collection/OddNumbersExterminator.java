@@ -1,39 +1,32 @@
 package com.kodilla.testing.collection;
 
-
-
 import java.util.ArrayList;
 
-
-
 public class OddNumbersExterminator {
-
-  
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
 
         if (numbers == null) {
 
-            throw new IllegalArgumentException("ArrayList is null");
+            throw new IllegalArgumentException("ArrayList is empty");
 
         }
 
-        ArrayList<Integer> evens = new ArrayList<>();
+        ArrayList<Integer> even = new ArrayList<>();
 
         for (Integer i : numbers) {
 
             if (i % 2 == 0) {
 
-                evens.add(i);
+                even.add(i);
 
             }
 
         }
 
-        return evens;
+        return even;
 
     }
-
 
 }
 
