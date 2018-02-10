@@ -72,7 +72,9 @@ public class CollectionTestSuite {
 
         ArrayList<Integer> averageList =
 
-                new ArrayList<>(Arrays.asList(7, 99, -13, 4, -9, -7, 6, 1, 3, -4, 12, 5, -18, 99));
+                new ArrayList<>(Arrays.asList(-1, 100, 3, 2, -5, -2, 7,
+
+                        0, -9, 4, 11, -4, -13, 100));
 
         //when
 
@@ -85,7 +87,7 @@ public class CollectionTestSuite {
 
         ArrayList<Integer> expected =
 
-                new ArrayList<>(Arrays.asList(99, 4, -4, 1, 4, -4, 99));
+                new ArrayList<>(Arrays.asList(100, 2, -2, 0, 4, -4, 100));
 
         assertEquals(expected, result);
 
