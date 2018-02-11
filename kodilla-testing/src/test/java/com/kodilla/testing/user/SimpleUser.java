@@ -1,4 +1,4 @@
-package com.kodilla.testing.User;
+package com.kodilla.testing.user;
 
 /**
  * Created by Bartosz Biernacki.
