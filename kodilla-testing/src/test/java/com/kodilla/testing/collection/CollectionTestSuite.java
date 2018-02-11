@@ -2,126 +2,76 @@ package com.kodilla.testing.collection;
 
 import org.junit.*;
 import java.util.*;
-
 import static org.junit.Assert.*;
 
 public class CollectionTestSuite {
 
     @BeforeClass
-
     public static void beforeClass() {
-
         System.out.println("CollectionTestSuite BEGIN");
-
     }
 
     @AfterClass
-
     public static void afterClass() {
-
         System.out.println("CollectionTestSuite END");
-
     }
 
     @Before
-
     public void before() {
-
         System.out.println("Test unit BEGIN");
-
     }
 
     @After
-
     public void after() {
-
         System.out.println("Test unit END");
-
     }
 
     @Test
-
     public void testOddNumbersExterminatorEmptyList() {
-
-        // given
-
+        //Given
         OddNumbersExterminator exterm = new OddNumbersExterminator();
-
         ArrayList<Integer> emptyList = new ArrayList<>();
 
-        //when
-
+        //When
         ArrayList<Integer> result = exterm.exterminate(emptyList);
 
-        //then
-
+        //Then
         assertNotNull(result);
-
         assertTrue(result.isEmpty());
-
     }
 
-
     @Test
-
     public void testOddNumbersExterminatorNormalList() {
 
-        //given
-
+        //Given
         OddNumbersExterminator exterm = new OddNumbersExterminator();
-
         ArrayList<Integer> averageList =
+                new ArrayList<>(Arrays.asList(-1, 100, 3, 2, -5, -2, 7, 0, -9, 4, 11, -4, -13, 100));
 
-                new ArrayList<>(Arrays.asList(-1, 100, 3, 2, -5, -2, 7,
-
-                        0, -9, 4, 11, -4, -13, 100));
-
-        //when
-
+        //When
         ArrayList<Integer> result = exterm.exterminate(averageList);
 
-
-        //then
-
+        //Then
         assertNotNull(result);
-
         ArrayList<Integer> expected =
-
                 new ArrayList<>(Arrays.asList(100, 2, -2, 0, 4, -4, 100));
-
         assertEquals(expected, result);
-
     }
-
 
     @Test
-
     public void testOddNumbersExterminatorIllegalArgument() {
 
-        //given
-
+        //Given
         OddNumbersExterminator exterm = new OddNumbersExterminator();
-
         ArrayList<Integer> invalidList = null;
-
-
-
         try {
 
-            //when
-
+            //When
             exterm.exterminate(invalidList);
 
-            //then
-
+            //Then
             fail();
-
         } catch (IllegalArgumentException exc) {
-
-
-
         }
-
     }
-
 }
