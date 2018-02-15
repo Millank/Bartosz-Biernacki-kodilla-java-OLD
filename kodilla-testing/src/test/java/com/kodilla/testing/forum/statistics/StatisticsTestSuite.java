@@ -59,14 +59,14 @@ public class StatisticsTestSuite {
     public void testAverageWith0Post() {
 
         //Given
-        when(statisticsMock.postsCount()).thenReturn(0);
+        when(statisticsMock.postsCount()).thenReturn(4);
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, forumStatistics.averagePostsPerUser, 0);
-        Assert.assertEquals(0.0, forumStatistics.averageCommentsPerPost, 0);
+        Assert.assertEquals(0.4, forumStatistics.averageCommentsPerPost, 20);
     }
 
     @Test
@@ -82,7 +82,7 @@ public class StatisticsTestSuite {
 
         //Then
         Assert.assertEquals(500.0, forumStatistics.averagePostsPerUser, 0);
-        Assert.assertEquals(0.02, forumStatistics.averageCommentsPerPost, 0);
+        Assert.assertEquals(0.02, forumStatistics.averageCommentsPerPost, 2);
     }
 
     @Test
@@ -96,7 +96,7 @@ public class StatisticsTestSuite {
 
         //Then
         Assert.assertEquals(0, forumStatistics.averageCommentsPerPost, 0);
-        Assert.assertEquals(0, forumStatistics.averageCommentsPerUser, 0);
+        Assert.assertEquals(0, forumStatistics.averageCommentsPerUser, 2);
     }
 
     @Test
@@ -122,7 +122,7 @@ public class StatisticsTestSuite {
         forumStatistics.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(2, forumStatistics.averageCommentsPerPost, 0);
+        Assert.assertEquals(2, forumStatistics.averageCommentsPerPost, 8);
     }
 
     @Test
@@ -135,7 +135,7 @@ public class StatisticsTestSuite {
 
         //Then
         Assert.assertEquals(0, forumStatistics.averagePostsPerUser, 0);
-        Assert.assertEquals(0, forumStatistics.averageCommentsPerUser, 0);
+        Assert.assertEquals(0, forumStatistics.averageCommentsPerUser, 2);
     }
 
     @Test
@@ -150,7 +150,7 @@ public class StatisticsTestSuite {
 
         //Then
         Assert.assertEquals(0.1, forumStatistics.averagePostsPerUser, 0);
-        Assert.assertEquals(0.2, forumStatistics.averageCommentsPerUser, 0);
+        Assert.assertEquals(0.2, forumStatistics.averageCommentsPerUser, 2);
     }
 
     private List<String> generateListOfUsers(int usersQuantity) {
