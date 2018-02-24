@@ -4,7 +4,6 @@ import java.util.*;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -16,8 +15,6 @@ import static org.mockito.internal.verification.VerificationModeFactory.times;
 public class BookDirectoryTestSuite {
     LibraryDatabase libraryDatabaseMock;
     BookLibrary bookLibrary;
-
-    @Ignore
 
     @Test
     public void testListBooksWithConditionsReturnList() {
@@ -53,8 +50,6 @@ public class BookDirectoryTestSuite {
         return resultList;
     }
 
-    @Ignore
-
     @Test
     public void testListBooksWithConditionMoreThan20() {
 
@@ -87,8 +82,7 @@ public class BookDirectoryTestSuite {
         Assert.assertEquals(15, theListOfBooks15.size());
         Assert.assertEquals(0, theListOfBooks40.size());
     }
-
-    @Ignore
+    
     @Test
     public void testListBooksWithConditionFragmentShorterThan3() {
 
