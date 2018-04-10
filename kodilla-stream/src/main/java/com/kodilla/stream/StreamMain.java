@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 public class StreamMain {
     public static void main(String[] args) {
         Forum forum = new Forum();
-
         Map<Integer, ForumUser> theResultMapOfUsers = forum.getUserList().stream()
                 .filter(a -> a.getSex() == 'M')
                 .filter(a -> Period.between(a.getBirthDate(), LocalDate.now()).getYears() > 20)

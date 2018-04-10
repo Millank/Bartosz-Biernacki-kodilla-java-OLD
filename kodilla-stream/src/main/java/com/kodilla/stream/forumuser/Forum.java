@@ -7,6 +7,7 @@ import java.util.List;
 
 public final class Forum {
     private final List<ForumUser> userList = new ArrayList<>();
+
     public  Forum(){
         userList.add(new ForumUser(1,"słodowy",'M', LocalDate.of(1990,5,2),3));
         userList.add(new ForumUser(2,"domel",'F',LocalDate.of(1991, Month.DECEMBER,3),1));
@@ -18,5 +19,4 @@ public final class Forum {
     public List<ForumUser> getUserList() {
         return new ArrayList<>(userList);
     }
-
 }
