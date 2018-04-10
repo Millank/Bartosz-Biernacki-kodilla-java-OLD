@@ -18,4 +18,5 @@ public final class Forum {
     public List<ForumUser> getUserList() {
         return new ArrayList<>(userList);
     }
+
 }
