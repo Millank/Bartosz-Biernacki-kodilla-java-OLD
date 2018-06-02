@@ -1,9 +1,8 @@
 package com.kodilla.stream.immutable;
-
 public final class Book {
     private final String title;
     private final String author;
-    private int yearOfPublication;
+    private final int yearOfPublication;
 
     public Book(final String title, final String author,
                 final int yearOfPublication) {
@@ -22,9 +21,5 @@ public final class Book {
 
     public int getYearOfPublication() {
         return yearOfPublication;
-    }
-
-    public int modifyYearOfPublication(int year) {
-        return yearOfPublication = year;
     }
 }

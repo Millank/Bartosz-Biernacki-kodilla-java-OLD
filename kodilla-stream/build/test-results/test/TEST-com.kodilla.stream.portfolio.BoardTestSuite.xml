@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.portfolio.BoardTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-06-02T08:55:36" hostname="DESKTOP-7LAPE2A" time="0.062">
+  <properties/>
+  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.016"/>
+  <testcase name="testAddTaskListFindUsersTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.015"/>
+  <testcase name="testAddTaskListFindLongTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.016"/>
+  <testcase name="testAddTaskListAverageWorkingOnTaskVersion1" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.0"/>
+  <testcase name="testAddTaskListAverageWorkingOnTaskVersion2" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.015"/>
+  <testcase name="testAddTaskListFindOutdatedTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

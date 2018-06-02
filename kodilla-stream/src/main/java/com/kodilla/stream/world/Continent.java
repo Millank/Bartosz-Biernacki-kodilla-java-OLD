@@ -9,15 +9,18 @@ public final class Continent {
     public Continent(final String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
+
     public void addCountry(Country country) {
         if (country == null) {
             throw new IllegalArgumentException();
         }
         countries.add(country);
     }
+
     public List<Country> getCountries(){
         return new ArrayList<>(countries);
     }

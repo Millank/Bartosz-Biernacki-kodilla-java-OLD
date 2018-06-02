@@ -6,10 +6,8 @@ import java.math.BigDecimal;
 import static org.junit.Assert.*;
 
 public class WorldTestSuite {
-
     @Test
     public void testGetPeopleQuantity() {
-
         //GIVEN - the world with continents
         World world = new World();
         Continent africa = new Continent("Africa");

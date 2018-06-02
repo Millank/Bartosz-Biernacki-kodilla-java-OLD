@@ -6,7 +6,6 @@ import org.junit.Test;
 public class ForumUserTestSuite {
     @Test
     public void testGetLocationsOfFriends() {
-
         //Given
         //Create users
         ForumUser user1 = new ForumUser("alan01", "Alan Kosovsky", "Washington");
@@ -25,23 +24,18 @@ public class ForumUserTestSuite {
         user1.addFriend(user3);
         user1.addFriend(user7);
         user1.addFriend(user10);
-
         //Create relations for user3
         user3.addFriend(user1);
         user3.addFriend(user7);
         user3.addFriend(user2);
         user3.addFriend(user9);
-
         //Create relations for user7
         user7.addFriend(user1);
         user7.addFriend(user3);
-
         //Create relations for user10
         user10.addFriend(user1);
-
         //Create relations for user2
         user2.addFriend(user3);
-
         //Create relations for user9
         user9.addFriend(user3);
 
@@ -50,7 +44,6 @@ public class ForumUserTestSuite {
         //   user3:  "Key West"
         //   user7:  "Washington"
         //   user10: "Miami"
-
         Assert.assertEquals(3, user1.getLocationsOfFriends().size());
         Assert.assertTrue(user1.getLocationsOfFriends().contains("Key West"));
         Assert.assertTrue(user1.getLocationsOfFriends().contains("Washington"));
@@ -78,23 +71,18 @@ public class ForumUserTestSuite {
         user1.addFriend(user3);
         user1.addFriend(user7);
         user1.addFriend(user10);
-
         //Create relations for user3
         user3.addFriend(user1);
         user3.addFriend(user7);
         user3.addFriend(user2);
         user3.addFriend(user9);
-
         //Create relations for user7
         user7.addFriend(user1);
         user7.addFriend(user3);
-
         //Create relations for user10
         user10.addFriend(user1);
-
         //Create relations for user2
         user2.addFriend(user3);
-
         //Create relations for user9
         user9.addFriend(user3);
 
@@ -107,7 +95,6 @@ public class ForumUserTestSuite {
         //   user7:  user1: - should be skipped ("this" in context of user1)
         //           user3: "Key West"
         //   user10: user1: - should be skipped ("this" in context of user1)
-
         Assert.assertEquals(3, user1.getLocationsOfFriendsOfFriends().size());
         Assert.assertTrue(user1.getLocationsOfFriendsOfFriends().contains("Key West"));
         Assert.assertTrue(user1.getLocationsOfFriendsOfFriends().contains("Washington"));

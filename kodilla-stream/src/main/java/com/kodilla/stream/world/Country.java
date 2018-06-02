@@ -13,6 +13,7 @@ public final class Country {
         this.name = name;
         this.peopleQuantity = peopleQuantity;
     }
+
     public String getName() {
         return name;
     }
